@@ -1,5 +1,5 @@
 # Social Media & Data Mining Mining
-This repository contains the code I created in the Social Media Mining course
+This repository contains the code I created in the Social Media and Data Mining Course
 
 ## How to install and run
 1. Download/Clone repository
