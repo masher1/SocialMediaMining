@@ -1,4 +1,5 @@
 import random
+import first_module
 
 class font:
    PURPLE = '\033[95m'
@@ -13,29 +14,42 @@ class font:
    END = '\033[0m'
 
 def letCompare(letter, word, answer, usedLetters, missed):
-    count = 0;
+    count = 0; #Count how many times a letter has been matched
     positions = []
-    matched = False
+    matched = False #The letters are the same
+    repeated = False  #The letter has been chosen before therefore is a repeated letter
+    new_list = new_list = ['  _______', ' |/      |', '|', ' |', ' |', ' |', ' |', '_|___']
     wordLetters = split(word)
     for i in range(len(word)):
         if(letter.lower() == wordLetters[i].lower()): #letter guessed matches one of the letters in the word
-            count = count + 1;
+            count = count + 1
             matched = True
             if(not(letter in usedLetters)):
                 usedLetters.append(letter)
             positions.append(i)
-    if (matched):
+    if (not (letter in usedLetters)):
+            usedLetters.append(letter)
+    elif (not matched and (letter in usedLetters)):
+        print(font.RED + "ERROR: You have already tried this letter" + font.END)
+        repeated = True;
+    if (matched and not repeated):
         print("letter \'",letter,"\' was matched", count, "times")
         print("You have used the following letter(s):", usedLetters)
         print("Position(s): ", positions)
-    else:
+    elif(not repeated):
+        missed = missed + 1
         print("letter \'",letter,"\' is not in the word")
-        first_module.hangman(1)
+        print("You have used the following letter(s):", usedLetters)
+        done = first_module.HangDraw(missed, new_list)
+        if done:
+            print(font.RED + font.BOLD + font.UNDERLINE + "The word was:", word + font.END)
+            return 0
+
     for i in range(len(positions)):
         answer[positions[i]] = letter#answer.insert(positions[i], letter)
-    print(answer)
+    #print(answer)
 
-    return (answer, usedLetters)
+    return (answer, usedLetters, missed)
 
 def split(word):
     return [char for char in word]

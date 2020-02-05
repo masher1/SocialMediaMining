@@ -5,92 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment 1 - Simple Python Code/WordBank.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 1 - Simple Python Code/WordBank.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment 1 - Simple Python Code/first_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment 1 - Simple Python Code/first_module.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/core/function_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/core/function_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/core/tests/test_numerictypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/core/tests/test_numerictypes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/doc/broadcasting.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/doc/broadcasting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/doc/glossary.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/doc/glossary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/doc/indexing.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/doc/indexing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/lib/tests/test_format.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/lib/tests/test_format.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/lib/tests/test_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/lib/tests/test_io.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/random/tests/test_generator_mt19937.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/numpy/random/tests/test_generator_mt19937.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/_config/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/_config/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/core/indexes/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/core/indexes/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/core/indexes/multi.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/core/indexes/multi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/io/excel/_openpyxl.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/io/excel/_openpyxl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/io/excel/_xlsxwriter.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/io/excel/_xlsxwriter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/io/formats/css.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/io/formats/css.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/io/formats/excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/io/formats/excel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/io/formats/style.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/io/formats/style.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/plotting/_core.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/plotting/_core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/plotting/_matplotlib/boxplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/plotting/_matplotlib/boxplot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/plotting/_matplotlib/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/plotting/_matplotlib/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/plotting/_matplotlib/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/plotting/_matplotlib/misc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/plotting/_matplotlib/style.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/plotting/_matplotlib/style.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/plotting/_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/plotting/_misc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/dtypes/test_generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/dtypes/test_generic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/frame/test_query_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/frame/test_query_eval.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/groupby/test_nth.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/groupby/test_nth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/indexes/multi/test_get_set.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/indexes/multi/test_get_set.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/io/excel/test_openpyxl.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/io/excel/test_openpyxl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/io/excel/test_style.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/io/excel/test_style.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/io/formats/test_css.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/io/formats/test_css.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/io/formats/test_style.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/io/formats/test_style.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/io/formats/test_to_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/io/formats/test_to_excel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/plotting/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/plotting/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/plotting/test_datetimelike.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/plotting/test_datetimelike.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/plotting/test_frame.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/plotting/test_frame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/plotting/test_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/plotting/test_misc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/test_multilevel.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pandas/tests/test_multilevel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/cli/cmdoptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/cli/cmdoptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/utils/logging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/html5lib/filters/sanitizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/html5lib/filters/sanitizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/html5lib/html5parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/html5lib/html5parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/pep517/colorlog.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/pep517/colorlog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/pyparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/pyparsing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/selenium/webdriver/support/color.py" beforeDir="false" afterPath="$PROJECT_DIR$/InstagBot/venv/Lib/site-packages/selenium/webdriver/support/color.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/core/function_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/core/function_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/core/tests/test_numerictypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/core/tests/test_numerictypes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/doc/broadcasting.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/doc/broadcasting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/doc/glossary.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/doc/glossary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/doc/indexing.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/doc/indexing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/lib/tests/test_format.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/lib/tests/test_format.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/lib/tests/test_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/lib/tests/test_io.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/random/tests/test_generator_mt19937.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/numpy/random/tests/test_generator_mt19937.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/_config/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/_config/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/core/indexes/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/core/indexes/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/core/indexes/multi.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/core/indexes/multi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/io/excel/_openpyxl.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/io/excel/_openpyxl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/io/excel/_xlsxwriter.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/io/excel/_xlsxwriter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/io/formats/css.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/io/formats/css.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/io/formats/excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/io/formats/excel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/io/formats/style.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/io/formats/style.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/plotting/_core.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/plotting/_core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/plotting/_matplotlib/boxplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/plotting/_matplotlib/boxplot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/plotting/_matplotlib/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/plotting/_matplotlib/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/plotting/_matplotlib/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/plotting/_matplotlib/misc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/plotting/_matplotlib/style.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/plotting/_matplotlib/style.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/plotting/_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/plotting/_misc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/dtypes/test_generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/dtypes/test_generic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/frame/test_query_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/frame/test_query_eval.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/groupby/test_nth.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/groupby/test_nth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/indexes/multi/test_get_set.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/indexes/multi/test_get_set.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/io/excel/test_openpyxl.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/io/excel/test_openpyxl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/io/excel/test_style.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/io/excel/test_style.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/io/formats/test_css.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/io/formats/test_css.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/io/formats/test_style.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/io/formats/test_style.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/io/formats/test_to_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/io/formats/test_to_excel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/plotting/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/plotting/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/plotting/test_datetimelike.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/plotting/test_datetimelike.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/plotting/test_frame.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/plotting/test_frame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/plotting/test_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/plotting/test_misc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/test_multilevel.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pandas/tests/test_multilevel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/cli/cmdoptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/cli/cmdoptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/utils/logging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/html5lib/filters/sanitizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/html5lib/filters/sanitizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/html5lib/html5parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/html5lib/html5parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/pep517/colorlog.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/pep517/colorlog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/pyparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_vendor/pyparsing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/venv/Lib/site-packages/selenium/webdriver/support/color.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/venv/Lib/site-packages/selenium/webdriver/support/color.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,21 +126,34 @@
       <option name="project" value="LOCAL" />
       <updated>1580857243655</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Partial code works.&#10;Still implementing some stuff">
+      <created>1580897452821</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580897452821</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added new project" />
     <MESSAGE value="new code to start out the hangman project" />
     <MESSAGE value="Added several methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added several methods" />
+    <MESSAGE value="Partial code works.&#10;Still implementing some stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Partial code works.&#10;Still implementing some stuff" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1073" y="136" key="CommitChangelistDialog2" timestamp="1580857241698">
+    <state x="870" y="273" key="#xdebugger.XInspectDialog" timestamp="1580901152707">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="619" y="119" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580718764797" />
+    <state x="870" y="273" key="#xdebugger.XInspectDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580901152707" />
+    <state x="619" y="119" key="CommitChangelistDialog2" timestamp="1580897449995">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="619" y="119" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580897449995" />
     <state x="1073" y="136" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580857241698" />
     <state width="1899" height="393" key="GridCell.Tab.-1.bottom" timestamp="1580888681479">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -244,26 +171,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="393" key="GridCell.Tab.-1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580888681479" />
-    <state width="1899" height="393" key="GridCell.Tab.0.bottom" timestamp="1580897308044">
+    <state width="1899" height="142" key="GridCell.Tab.0.bottom" timestamp="1580943625011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="393" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580897308044" />
-    <state width="1899" height="205" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580871213104" />
-    <state width="1899" height="393" key="GridCell.Tab.0.center" timestamp="1580897308044">
+    <state width="1899" height="393" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580901293889" />
+    <state width="1899" height="142" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580943625011" />
+    <state width="1899" height="142" key="GridCell.Tab.0.center" timestamp="1580943625011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="393" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580897308044" />
-    <state width="1899" height="205" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580871213104" />
-    <state width="1899" height="393" key="GridCell.Tab.0.left" timestamp="1580897308043">
+    <state width="1899" height="393" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580901293889" />
+    <state width="1899" height="142" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580943625011" />
+    <state width="1899" height="142" key="GridCell.Tab.0.left" timestamp="1580943625011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="393" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580897308043" />
-    <state width="1899" height="205" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580871213104" />
-    <state width="1899" height="393" key="GridCell.Tab.0.right" timestamp="1580897308044">
+    <state width="1899" height="393" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580901293889" />
+    <state width="1899" height="142" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580943625011" />
+    <state width="1899" height="142" key="GridCell.Tab.0.right" timestamp="1580943625011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="393" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580897308044" />
-    <state width="1899" height="205" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580871213104" />
+    <state width="1899" height="393" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580901293889" />
+    <state width="1899" height="142" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580943625011" />
     <state width="1899" height="393" key="GridCell.Tab.1.bottom" timestamp="1580888660002">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -288,19 +215,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="166" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580714598575" />
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1580857255196">
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1580897485325">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580718773804" />
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580897485325" />
     <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580857255196" />
     <state x="771" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580879923361">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580879923361" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1580889732750">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1580898639999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580889732750" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580898639999" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580761747068" />
   </component>
   <component name="XDebuggerManager">
@@ -308,8 +235,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Assignment 1 - Simple Python Code/first_module.py</url>
-          <line>94</line>
-          <option name="timeStamp" value="32" />
+          <line>112</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Assignment 1 - Simple Python Code/WordBank.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

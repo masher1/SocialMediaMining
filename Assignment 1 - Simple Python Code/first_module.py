@@ -69,6 +69,7 @@ def guess_the_letter(word):
     usedLetters = []
     spacePositions = []
     num = 0;
+    missed = 0;
     print("The word contains:", wordLen, "letters")
     print_(wordLen)
 
@@ -86,31 +87,34 @@ def guess_the_letter(word):
     while (not ready):
         try:
             letter = input("What is your first letter choice?")
-            if letter.isalpha() and letter.islower():
+            if letter.isalpha() and letter.islower() and len(letter) == 1:
                 ready = True
             else:
                 raise Exception()
         except:
             print(WordBank.font.RED + "ERROR: Please enter lowercase, single character letters only" + WordBank.font.END)
-    WordBank.letCompare(letter, word, answer, usedLetters)
-    # TODO: implement the hangman structure somewhere here and limit it to 7 wrong guesses
+    (answer, usedLetters, missed) = WordBank.letCompare(letter, word, answer, usedLetters, missed)
+    newWord = ""
+    for x in answer:
+        newWord += x
+    print(WordBank.font.DARKCYAN + "Your Word so far:", newWord + WordBank.font.END)
+    #REVIEWED: implement the hangman structure somewhere here and limit it to 7 wrong guesses
     while (newWord != word):
         ready = False
         while (not ready):
             try:
-                letter = input("What is your first letter choice?")
+                letter = input("What is your next letter choice?")
                 if letter.isalpha() and letter.islower():
                     ready = True
                 else:
                     raise Exception()
             except:
-                print(
-                    WordBank.font.RED + "ERROR: Please enter lowercase, single character letters only" + WordBank.font.END)
-        (answer, usedLetters) = WordBank.letCompare(letter, word, answer, usedLetters)
+                print(WordBank.font.RED + "ERROR: Please enter lowercase, single character letters only" + WordBank.font.END)
+        (answer, usedLetters, missed) = WordBank.letCompare(letter, word, answer, usedLetters, missed)
         newWord = ""
         for x in answer:
             newWord += x
-        print("Your Word so far:", newWord)
+        print(WordBank.font.DARKCYAN + "Your Word so far:", newWord + WordBank.font.END)
     #TODO: make a decision here to display congrats if the word was guessed correctly or if the game finished with a dead man
     print("Congratulations!")
 
@@ -130,6 +134,34 @@ def hangman(x): # Makes the drawing for finished hangman
     print(WordBank.font.BLUE + " |" + WordBank.font.END)
     print(WordBank.font.BLUE + "_|___" + WordBank.font.END)
 
+def HangDraw(missed, new_list):
+    print("# of misses:",missed)
+    miss = missed
+    done = False;
+    bodyParts = [' |     (*_*)', ' |       |', ' |      \|', ' |      \|/', ' |       |', ' |      /', ' |      / \\']
+    # creating enumerate objects
+    obj1 = enumerate(bodyParts)
+    listOfMistakes = list(enumerate(bodyParts, 1))
+    if (miss >= 1):
+        new_list[2] = ' |     (*_*)'
+    if(miss == 2):
+        new_list[3] = ' |       |'
+    if(miss == 3):
+        new_list[3] = ' |      \|'
+    if(miss >= 4):
+        new_list[3] = ' |      \|/'
+    if(miss >= 5):
+        new_list[4] = ' |       |'
+    if(miss == 6):
+        new_list[5] = ' |      /'
+    if (miss == 7):
+        new_list[5] = ' |      / \\'
+        done = True
+
+    print(WordBank.font.BLUE + '\n'.join(new_list) + WordBank.font.END)
+    if done:
+        print(WordBank.font.RED + WordBank.font.BOLD  + "\nUnfortunately you have lost the game :(\n" + WordBank.font.END)
+    return done
 
 def hangman(): # Makes the drawing for hangman
     print(WordBank.font.BLUE + "  _______" + WordBank.font.END)
