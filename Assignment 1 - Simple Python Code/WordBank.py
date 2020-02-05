@@ -1,6 +1,6 @@
 import random
 
-class color:
+class font:
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
    DARKCYAN = '\033[36m'
@@ -12,27 +12,30 @@ class color:
    UNDERLINE = '\033[4m'
    END = '\033[0m'
 
-def letCompare(letter, word):
+def letCompare(letter, word, answer, usedLetters, missed):
     count = 0;
     positions = []
-    answer = []
-    usedLetters = []
+    matched = False
     wordLetters = split(word)
     for i in range(len(word)):
-        if(letter == wordLetters[i]): #letter guessed matches one of the letters in the word
+        if(letter.lower() == wordLetters[i].lower()): #letter guessed matches one of the letters in the word
             count = count + 1;
+            matched = True
             if(not(letter in usedLetters)):
                 usedLetters.append(letter)
             positions.append(i)
-    print("letter \'",letter,"\' was matched", count, "times")
+    if (matched):
+        print("letter \'",letter,"\' was matched", count, "times")
+        print("You have used the following letter(s):", usedLetters)
+        print("Position(s): ", positions)
+    else:
+        print("letter \'",letter,"\' is not in the word")
+        first_module.hangman(1)
+    for i in range(len(positions)):
+        answer[positions[i]] = letter#answer.insert(positions[i], letter)
+    print(answer)
 
-    print("You have used the following letters:", usedLetters)
-    print("Positions: ", positions)
-
-    for i in range(len(positions) - 1):
-        answer.insert(positions[i], usedLetters[0])
-        print(answer.insert(positions[i], usedLetters[0]))
-
+    return (answer, usedLetters)
 
 def split(word):
     return [char for char in word]
@@ -57,5 +60,7 @@ def word_bank(genre):#this method is designed to choose a word bank from a varie
     print("We are going to choose from the list of", genre, "which contains", numOfWords, "words!")
 
     #choose a random word
-    rand_word = wordList[random.randint(1, numOfWords)]
+    rand_word = wordList[random.randint(1, numOfWords-1)]
+    while(len(rand_word) < 7):
+        rand_word = wordList[random.randint(1, numOfWords-1)]
     return rand_word
