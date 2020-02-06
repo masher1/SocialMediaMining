@@ -13,7 +13,7 @@ class font:#ASCII color codes
    UNDERLINE = '\033[4m'
    END = '\033[0m'
 
-#this method does most of the work
+#this method does most of the work of comparing the letters
 def letCompare(letter, word, answer, usedLetters, missed):
     count = 0; #Count how many times a letter has been matched
     positions = []
@@ -51,20 +51,22 @@ def letCompare(letter, word, answer, usedLetters, missed):
             newWord += x
         print("letter \'",letter,"\' is not in the word")
         print("You have used the following letter(s):", usedLetters)
-        done = first_module.HangDraw(missed, new_list)
+        done = first_module.HangDraw(missed, new_list) #this will let us know if the user has failed and therefore the program is done
         if done:
             print(font.RED + font.BOLD + "The word was:", word + font.END)
             print(font.RED + font.BOLD + "You guessed:", newWord + font.END)
             return 0, 0, 0
 
-    #
+    #assign the new letter to the final user guessed answer
     for i in range(len(positions)):
         answer[positions[i]] = letter#answer.insert(positions[i], letter)
-    return (answer, usedLetters, missed)
+    return (answer, usedLetters, missed) #These are the variables we want to keep through the game.
 
+#This function is used to split the word into individual characters
 def split(word):
     return [char for char in word]
 
+#the word_bank function will help determine which file to use
 def word_bank(genre):#this method is designed to choose a word bank from a variety of files
     switcher = {
         1: 'Kitchen_Utensils',
@@ -80,8 +82,6 @@ def word_bank(genre):#this method is designed to choose a word bank from a varie
     file_name = genre +".txt"
     wordList = [word.rstrip('\n') for word in open(file_name)] #list comprehension to gather a list of all the words we could have
     numOfWords = len(wordList)
-    # dict comprehension to create dict with words as keys and length of words as values
-    wordLength = {f: len(f) for f in wordList}
     print("We are going to choose from the list of", genre, "which contains", numOfWords, "words!")
 
     #choose a random word
