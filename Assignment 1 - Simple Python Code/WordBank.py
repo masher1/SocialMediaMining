@@ -1,7 +1,7 @@
 import random
 import first_module
 
-class font:
+class font:#ASCII color codes
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
    DARKCYAN = '\033[36m'
@@ -13,42 +13,53 @@ class font:
    UNDERLINE = '\033[4m'
    END = '\033[0m'
 
+#this method does most of the work
 def letCompare(letter, word, answer, usedLetters, missed):
     count = 0; #Count how many times a letter has been matched
     positions = []
     matched = False #The letters are the same
+    ignore = False # vaariable to check if you should ignore the first case of correct letter showing up or not
     repeated = False  #The letter has been chosen before therefore is a repeated letter
     new_list = new_list = ['  _______', ' |/      |', '|', ' |', ' |', ' |', ' |', '_|___']
-    wordLetters = split(word)
+    wordLetters = split(word)# split each word into individual letters
     for i in range(len(word)):
         if(letter.lower() == wordLetters[i].lower()): #letter guessed matches one of the letters in the word
             count = count + 1
-            matched = True
-            if(not(letter in usedLetters)):
-                usedLetters.append(letter)
+            matched = True #there was a match between the letter put in and one of the letters in the word
             positions.append(i)
-    if (not (letter in usedLetters)):
-            usedLetters.append(letter)
-    elif (not matched and (letter in usedLetters)):
-        print(font.RED + "ERROR: You have already tried this letter" + font.END)
+            if (not (letter in usedLetters)):  # letter chosen by user is not in usedLetters
+                ignore = True;
+    if not ignore and matched:
+        print(font.RED + "ERROR: You have already tried this letter and it worked" + font.END)
         repeated = True;
-    if (matched and not repeated):
+    elif (not matched and (letter in usedLetters)):
+        print(font.RED + "ERROR: You have already tried this letter but it didn't work" + font.END)
+        repeated = True;
+    #if (not (letter in usedLetters)):
+        #usedLetters.append(letter)
+    if (not (letter in usedLetters)):  # letter chosen by user is not in usedLetters
+        usedLetters.append(letter)
+        ignore = True;
+    if (matched and not repeated): #the letter is matched and it is the first time it appears
         print("letter \'",letter,"\' was matched", count, "times")
         print("You have used the following letter(s):", usedLetters)
         print("Position(s): ", positions)
     elif(not repeated):
         missed = missed + 1
+        newWord = ""
+        for x in answer:
+            newWord += x
         print("letter \'",letter,"\' is not in the word")
         print("You have used the following letter(s):", usedLetters)
         done = first_module.HangDraw(missed, new_list)
         if done:
-            print(font.RED + font.BOLD + font.UNDERLINE + "The word was:", word + font.END)
-            return 0
+            print(font.RED + font.BOLD + "The word was:", word + font.END)
+            print(font.RED + font.BOLD + "You guessed:", newWord + font.END)
+            return 0, 0, 0
 
+    #
     for i in range(len(positions)):
         answer[positions[i]] = letter#answer.insert(positions[i], letter)
-    #print(answer)
-
     return (answer, usedLetters, missed)
 
 def split(word):
