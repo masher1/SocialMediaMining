@@ -49,7 +49,7 @@ def guess_the_letter(word):
     for i in range(num):
         answer[spacePositions[i]] = ' '
     print("\nThere are", num, "spaces in the word")
-    print("\nThe word is", word) #for debugging purposes ONLY
+    #print("\nThe word is", word) #for debugging purposes ONLY
 
     #REVIEWED: make sure only small case letters are acceptable  NO NUMBERS
     ready = False
