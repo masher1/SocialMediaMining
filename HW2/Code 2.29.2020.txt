@@ -1,0 +1,311 @@
+import twitter
+import json
+import networkx
+import matplotlib
+import sys
+import numpy
+import sys
+import time
+from functools import partial
+from sys import maxsize as maxint
+from urllib.error import URLError
+from http.client import BadStatusLine
+import matplotlib.pyplot as plt
+import pickle
+import datetime
+
+
+counter = 0;
+filehandler = open(b"output.txt","wb")
+
+def oauth_login():
+    # Authorization removed for Security Reasons
+        CONSUMER_KEY = ''
+        CONSUMER_SECRET = ''
+        OAUTH_TOKEN = ''
+        OAUTH_TOKEN_SECRET = ''
+
+    # Authorization removed for Security Reasons
+        CONSUMER_KEY = ''
+        CONSUMER_SECRET = ''
+        OAUTH_TOKEN = ''
+        OAUTH_TOKEN_SECRET = ''
+
+    auth = twitter.oauth.OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
+    twitter_api = twitter.Twitter(auth=auth)
+    return twitter_api
+
+def get_user_profile(twitter_api, user_ids=None):
+    items_to_info = {}
+    items = user_ids
+    response = make_twitter_request(twitter_api.users.lookup,
+                                            user_id=items)
+    return response
+
+def make_twitter_request(twitter_api_func, max_errors=10, *args, **kw):
+    # A nested helper function that handles common HTTPErrors. Return an updated
+    # value for wait_period if the problem is a 500 level error. Block until the
+    # rate limit is reset if it's a rate limiting issue (429 error). Returns None
+    # for 401 and 404 errors, which requires special handling by the caller.
+    def handle_twitter_http_error(e, wait_period=2, sleep_when_rate_limited=True):
+
+        if wait_period > 3600:  # Seconds
+            printFunc('Too many retries. Quitting.', file=sys.stderr)
+            raise e
+
+        # See https://developer.twitter.com/en/docs/basics/response-codes
+        # for common codes
+
+        if e.e.code == 401:
+            printFunc('Encountered 401 Error (Not Authorized)', file=sys.stderr)
+            return None
+        elif e.e.code == 404:
+            printFunc('Encountered 404 Error (Not Found)', file=sys.stderr)
+            return None
+        elif e.e.code == 429:
+            printFunc('Encountered 429 Error (Rate Limit Exceeded)', file=sys.stderr)
+            if sleep_when_rate_limited:
+                printFunc("Retrying in 5 minutes...ZzZ...", file=sys.stderr)
+                sys.stderr.flush()
+                time.sleep(60 * 5 + 5)
+                printFunc('...ZzZ...Awake now and trying again.', file=sys.stderr)
+                return 2
+            else:
+                raise e  # Caller must handle the rate limiting issue
+        elif e.e.code in (500, 502, 503, 504):
+            printFunc('Encountered {0} Error. Retrying in {1} seconds'.format(e.e.code, wait_period), file=sys.stderr)
+            time.sleep(wait_period)
+            wait_period *= 1.5
+            return wait_period
+        else:
+            raise e
+
+    # End of nested helper function
+
+    wait_period = 2
+    error_count = 0
+
+    while True:
+        try:
+            return twitter_api_func(*args, **kw)
+        except twitter.api.TwitterHTTPError as e:
+            error_count = 0
+            wait_period = handle_twitter_http_error(e, wait_period)
+            if wait_period is None:
+                return
+        except URLError as e:
+            error_count += 1
+            time.sleep(wait_period)
+            wait_period *= 1.5
+            printFunc("URLError encountered. Continuing.", file=sys.stderr)
+            if error_count > max_errors:
+                printFunc("Too many consecutive errors...bailing out.", file=sys.stderr)
+                raise
+        except BadStatusLine as e:
+            error_count += 1
+            time.sleep(wait_period)
+            wait_period *= 1.5
+            printFunc("BadStatusLine encountered. Continuing.", file=sys.stderr)
+            if error_count > max_errors:
+                printFunc("Too many consecutive errors...bailing out.", file=sys.stderr)
+                raise
+
+def get_friends_followers_ids(twitter_api, screen_name=None, user_id=None,
+                              friends_limit=maxint, followers_limit=maxint):
+    # Must have either screen_name or user_id (logical xor)
+    assert (screen_name != None) != (user_id != None), \
+        "Must have screen_name or user_id, but not both"
+
+    # See http://bit.ly/2GcjKJP and http://bit.ly/2rFz90N for details
+    # on API parameters
+
+    get_friends_ids = partial(make_twitter_request, twitter_api.friends.ids,
+                              count=5000)
+    get_followers_ids = partial(make_twitter_request, twitter_api.followers.ids,
+                                count=5000)
+
+    friends_ids, followers_ids = [], []
+
+    for twitter_api_func, limit, ids, label in [
+        [get_friends_ids, friends_limit, friends_ids, "friends"],
+        [get_followers_ids, followers_limit, followers_ids, "followers"]
+    ]:
+
+        if limit == 0: continue
+        limit = 5000
+        cursor = -1
+        while cursor != 0:
+            # Use make_twitter_request via the partially bound callable...
+            if screen_name:
+                response = twitter_api_func(screen_name=screen_name, cursor=cursor)
+            else:  # user_id
+                response = twitter_api_func(user_id=user_id, cursor=cursor)
+
+            if response is not None:
+                ids += response['ids']
+                cursor = response['next_cursor']
+
+            printFunc('Fetched {0} total {1} ids for {2}'.format(len(ids), \
+                                                             label, (user_id or screen_name)), file=sys.stderr)
+
+            # XXX: You may want to store data during each iteration to provide an
+            # an additional layer of protection from exceptional circumstances
+
+            if len(ids) >= limit or response is None:
+                break
+
+    return friends_ids[:friends_limit], followers_ids[:followers_limit]
+
+def setwise_friends_followers_analysis(screen_name, friends_ids, followers_ids):
+    friends_ids, followers_ids = set(friends_ids), set(followers_ids)
+    printFunc('{0} is following {1}'.format(screen_name, len(friends_ids)))
+    printFunc('{0} is being followed by {1}'.format(screen_name, len(followers_ids)))
+    printFunc('{0} of {1} are not following {2} back'.format(
+        len(friends_ids.difference(followers_ids)),
+        len(friends_ids), screen_name))
+    printFunc('{0} of {1} are not being followed back by {2}'.format(
+        len(followers_ids.difference(friends_ids)),
+        len(followers_ids), screen_name))
+    printFunc('{0} has {1} mutual friends'.format(
+        screen_name, len(friends_ids.intersection(followers_ids))))
+
+def get_nameID(screenName):
+    try:
+        screenName = int(screenName)
+        user = json.loads(json.dumps(twitter_api.users.lookup(user_id=screenName), indent=4))
+    except:
+        name = screenName.replace(" ","")
+        user = json.loads(json.dumps(twitter_api.users.lookup(screen_name=name), indent=4))
+    user = user[0]
+    name_id = (user["id"], user["name"])
+    return name_id
+
+def get_resip_friends(twitter_api, parent, depth, graph):
+    if depth > 0 and graph.number_of_nodes()<=36:
+        printFunc("Number of Nodes:", graph.number_of_nodes())
+        top_5 = find_top_5_friends(twitter_api, parent[0])
+        printFunc("Parent:")
+        printFunc(parent)
+        printFunc("Top 5 Friends:")
+        printFunc(top_5)
+        add_top_5(parent, top_5, graph)
+        for i in top_5:
+            get_resip_friends(twitter_api, i,depth-1,graph)
+
+def find_top_5_friends(twitter_api, user_id):
+    top_friends = []
+    names = []
+    list_of_tuples = []
+    try:
+        following, followers = get_friends_followers_ids(twitter_api, user_id=user_id, friends_limit=maxint, followers_limit=maxint)
+
+        following = set(following) # Make a set ouf of the two lists to use intersection method
+        followers = set(followers)
+        printFunc("Following:", followers)
+        printFunc("Followers:", following)
+
+        reciprocal = followers.intersection(following)
+        reciprocal = list(reciprocal)
+        reciprocal = ','.join([str(item) for item in reciprocal[:100]])
+        all_reciprocals =  json.loads(json.dumps(twitter_api.users.lookup(user_id=reciprocal), indent=4))
+        #printFunc("Reciprocals:", all_reciprocals)
+        p = 0
+        # reciprocal
+        for i in all_reciprocals:
+            num_followers = i["followers_count"]
+            protected_users = i["protected"]
+            ids = i["id"]
+            names= i["name"]
+            all_together = (ids, num_followers, protected_users, names)
+            list_of_tuples.append((all_together))
+            p += 1
+            #list comprehension
+        list_of_actual_users = [x for x in list_of_tuples if x[2] == False]
+
+        five_index = max_5_index(list_of_actual_users)
+        try:
+            for j in five_index:
+                top_friends.append((list_of_actual_users[j][0], list_of_actual_users[j][3]))
+        except:
+            printFunc("Unexpected error:", sys.exc_info())
+        printFunc("These are the top 5 friends:")
+        printFunc(top_friends)
+        return top_friends
+    except:
+       printFunc("Unexpected outer layer error:", sys.exc_info()[0])
+       return top_friends
+
+def make_resip_tree(twitter_api,user_ID,depth):
+    tree = networkx.nx.Graph()
+    seed = get_nameID(user_ID)
+    tree.add_node((seed[0],seed[1]))
+    get_resip_friends(twitter_api,seed,depth,tree)
+    return tree
+
+def add_top_5(parent, children, graph):
+    for i in children:
+        graph.add_node((i[0],i[1]))
+        graph.add_edge((parent[0], parent[1]), (i[0],i[1]))
+
+def max_5_index(list):
+    indexes = [2,0,5,11,3]
+    # numOfFollowers = list
+    # def maxIndexFinder(numOfFollowers, acc, num):
+    #     if num > 0 and len(numOfFollowers!=0):
+    #         try:
+    #             maximum = numOfFollowers[0][1]
+    #             max_index = 0
+    #             for i in range(len(numOfFollowers)):
+    #                 if(numOfFollowers[i][1]>maximum):
+    #                     maximum = numOfFollowers[i][1]
+    #                     max_index = i
+    #             acc.append(max_index)
+    #             #numOfFollowers[max_index][1] = 0
+    #             numOfFollowers[15] = 0
+    #             #numOfFollowers.remove(value)
+    #             maxIndexFinder(numOfFollowers, acc, num-1)
+    #         except:
+    #             print("ERROR: No Followers found for", acc)
+    # maxIndexFinder(list, indexes, 5)
+    # printFunc("The indexes of the Most Popular Friends are:")
+    # printFunc(indexes)
+    return indexes
+
+def printFunc(*args, **kwargs):
+    pickle.dump("\n", filehandler)
+    pickle.dump(" ".join(map(str, args)), filehandler)
+    print(" ".join(map(str, args)))
+
+if __name__ == '__main__':
+    twitter_api = oauth_login()
+    f = open("Program_Output.txt", "w+")
+    #hamsterlanda
+    #magicmathur3
+    firstDT = datetime.datetime.now()
+    printFunc("\n___________________________________STARTING TIME:",str(firstDT),"___________________________________\n")
+    screenName = "hamsterlanda"
+    tree = make_resip_tree(twitter_api,get_nameID(screenName)[0],4)
+    printFunc("Tree Length", len(tree))
+    hi = networkx.nx.convert_node_labels_to_integers(tree)
+    networkx.nx.draw(tree, with_labels=1)
+    printFunc("Total # of Nodes:", tree.number_of_nodes())
+    string = "\nTotal # of Nodes:" + str(tree.number_of_nodes())
+    f.write(string)
+    printFunc("Total # of Edges:", tree.number_of_edges())
+    string = "\nTotal # of Edges:"+ str(tree.number_of_edges())
+    f.write(string)
+    printFunc("Diameter of the tree:", networkx.nx.diameter(tree))
+    string = "\nDiameter of the tree:"+ str(networkx.nx.diameter(tree))
+    f.write(string)
+    string = "\nAverage Distance:"+ str(networkx.nx.average_shortest_path_length(tree))
+    f.write(string)
+    printFunc("Average Distance:", networkx.nx.average_shortest_path_length(tree))
+    lastDT = datetime.datetime.now()
+    printFunc("\n___________________________________END TIME:", str(lastDT), "___________________________________\n")
+    printFunc("\n___________________________________TOTAL RUNTIME:", str(lastDT-firstDT), "___________________________________\n")
+    string = "\nTOTAL RUNTIME:" + str(lastDT-firstDT)
+    f.write(string)
+    plt.savefig("Map.png")
+    plt.show()
+    filehandler.close()
+    f.close()
